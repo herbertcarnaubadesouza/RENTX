@@ -10,5 +10,4 @@ const createSpecificationUseCase = new CreateSpecificationUseCase(specificationR
 
 const createSpecificationController = new CreateSpecificationController(createSpecificationUseCase);
 
-
 export { createSpecificationController }

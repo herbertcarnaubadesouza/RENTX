@@ -4,8 +4,10 @@ import { router } from './routes';
 
 import swaggerFile from '../swagger.json';
 
-import "./database";
+import createConnection from './database';
 
+createConnection() // Esse "then" você pode apagar, se quiser
+    .then(() => console.log('connected to database'));
 
 const app = express();
 
