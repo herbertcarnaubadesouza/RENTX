@@ -1,4 +1,4 @@
-import { getRepository } from "typeorm";
+import { getConnectionManager, getRepository } from "typeorm";
 import { Repository } from "typeorm/repository/Repository";
 import { Category } from "../../entities/Category";
 import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository";

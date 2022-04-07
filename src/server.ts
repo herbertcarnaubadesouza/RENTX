@@ -1,10 +1,10 @@
+import 'reflect-metadata';
 import express from 'express';
 import swaggerUi from "swagger-ui-express";
 import { router } from './routes';
-
 import swaggerFile from '../swagger.json';
-
 import createConnection from './database';
+import "./shared/container";
 
 createConnection() // Esse "then" você pode apagar, se quiser
     .then(() => console.log('connected to database'));

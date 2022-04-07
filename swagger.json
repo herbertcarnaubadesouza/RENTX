@@ -13,9 +13,6 @@
   "paths": {
     "/categories/": {
       "post": {
-        "tags": [
-          "Create categories"
-        ],
         "description": "",
         "parameters": [],
         "responses": {}
@@ -26,11 +23,7 @@
         ],
         "description": "",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     },
     "/categories/import": {
