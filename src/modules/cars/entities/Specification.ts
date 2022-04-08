@@ -1,15 +1,20 @@
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidv4 } from "uuid";
 
-
+@Entity("specifications")
 class Specification {
 
-    id?: string | undefined;
+    @PrimaryColumn()
+    id?: string;
 
-    name: string | undefined;
+    @Column() // se o nome for igual da migration, não precisa colocar nada dentro
+    name: string;
 
-    description: string | undefined;
+    @Column()
+    description: string;
 
-    created_at: Date | undefined;
+    @CreateDateColumn()
+    created_at: Date;
 
     constructor() {
         if (!this.id) {
@@ -17,9 +22,7 @@ class Specification {
         }
     }
 
-
 }
-
 
 export { Specification }
 
