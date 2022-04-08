@@ -13,11 +13,17 @@
   "paths": {
     "/categories/": {
       "post": {
+        "tags": [
+          "Category"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}
       },
       "get": {
+        "tags": [
+          "Category"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}
@@ -25,6 +31,9 @@
     },
     "/categories/import": {
       "post": {
+        "tags": [
+          "Category"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}
@@ -32,11 +41,17 @@
     },
     "/specifications/": {
       "post": {
+        "tags": [
+          "Specification"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}
       },
       "get": {
+        "tags": [
+          "Specification"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}

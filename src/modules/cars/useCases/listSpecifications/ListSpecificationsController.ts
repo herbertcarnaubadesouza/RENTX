@@ -7,8 +7,7 @@ import { ListSpecificationsUseCase } from "./ListSpecificationsUseCase";
 
 class ListSpecificationsController {
 
-    async handle(request: Request, response: Response): Promise<Response> {
-        // #swagger.tags = ['List Users']
+    async handle(request: Request, response: Response): Promise<Response> {        
 
         const listSpecificationsUseCase = container.resolve(ListSpecificationsUseCase);
 

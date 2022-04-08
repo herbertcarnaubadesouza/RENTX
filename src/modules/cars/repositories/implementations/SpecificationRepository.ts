@@ -31,8 +31,7 @@ class SpecificationRepository implements ISpecificationRepository {
 
     };
 
-    async list(): Promise<Specification[]> {
-        // #swagger.tags = ['List Users']
+    async list(): Promise<Specification[]> {        
         const specifications = await this.repository.find();
 
         return specifications;

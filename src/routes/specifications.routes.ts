@@ -9,10 +9,13 @@ const createSpecificationController = new CreateSpecificationController();
 
 const listSpecificationsController = new ListSpecificationsController();
 
-specificationsRoutes.post("/", createSpecificationController.handle);
+specificationsRoutes.post("/", createSpecificationController.handle
+    /* #swagger.tags = ['Specification'] */
+);
 
-// #swagger.tags = ['List Users']
-specificationsRoutes.get("/", listSpecificationsController.handle);
+specificationsRoutes.get("/", listSpecificationsController.handle
+    /* #swagger.tags = ['Specification'] */
+);
 
 
 export { specificationsRoutes }

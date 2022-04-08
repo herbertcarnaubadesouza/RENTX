@@ -11,8 +11,7 @@ class ListSpecificationsUseCase {
         private SpecificationRepository: ISpecificationRepository) { }
 
 
-    async execute(): Promise<Specification[]> {
-        // #swagger.tags = ['List Users']
+    async execute(): Promise<Specification[]> {        
         const specifications = await this.SpecificationRepository.list();
 
         return specifications;
