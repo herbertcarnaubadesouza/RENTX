@@ -1,8 +1,10 @@
 FROM node
 
-WORKDIR /usr/app
+WORKDIR /app
 
 COPY package.json ./
+
+COPY ./tsconfig.json ./tsconfig.json
 
 
 RUN npm install

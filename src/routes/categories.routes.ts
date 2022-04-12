@@ -17,12 +17,12 @@ const importCategoryController = new ImportCategoryController();
 
 const listCategoriesController = new ListCategoriesController();
 
-categoriesRoutes.post("/", createCategoryController.handle 
+categoriesRoutes.post("/", createCategoryController.handle
     /* #swagger.tags = ['Category'] */
 );
 
 
-categoriesRoutes.get("/", listCategoriesController.handle 
+categoriesRoutes.get("/", listCategoriesController.handle
     /* #swagger.tags = ['Category'] */
 );
 
