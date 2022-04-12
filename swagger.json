@@ -79,6 +79,13 @@
         "responses": {}
       }
     },
+    "/users/avatar": {
+      "patch": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/sessions": {
       "post": {
         "description": "",
