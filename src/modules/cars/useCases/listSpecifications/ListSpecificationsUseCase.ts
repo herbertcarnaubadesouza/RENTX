@@ -1,4 +1,4 @@
-import { Specification } from "../../entities/Specification";
+import { Specification } from "../../infra/typeorm/entities/Specification";
 import { ISpecificationRepository } from "../../repositories/ISpecificationRepository";
 import { inject, injectable } from "tsyringe";
 
@@ -11,7 +11,7 @@ class ListSpecificationsUseCase {
         private SpecificationRepository: ISpecificationRepository) { }
 
 
-    async execute(): Promise<Specification[]> {        
+    async execute(): Promise<Specification[]> {
         const specifications = await this.SpecificationRepository.list();
 
         return specifications;

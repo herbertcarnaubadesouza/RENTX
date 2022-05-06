@@ -1,6 +1,6 @@
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { inject, injectable } from "tsyringe";
-import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
 import { hash } from "bcryptjs";
 import { AppError } from "../../../../errors/AppError";
 

@@ -1,9 +1,10 @@
-import { IUsersRepository } from "../../repositories/IUsersRepository";
-import { inject, injectable } from "tsyringe";
+import { AppError } from "@errors/AppError";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
-import { User } from "../../entities/User";
-import { AppError } from "../../../../errors/AppError";
+import { inject, injectable } from "tsyringe";
+
+
 
 
 interface IRequest {
