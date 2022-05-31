@@ -156,6 +156,19 @@
         "responses": {}
       }
     },
+    "/rentals/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
     "/sessions": {
       "post": {
         "description": "",
