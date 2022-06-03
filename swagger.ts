@@ -17,5 +17,5 @@ const endpointsFiles = ["./src/shared/infra/http/routes/index.ts"];
      such as index.js, app.js, routes.js, ... */
 
 swaggerAutogen()(outputFile, endpointsFiles, doc).then(async () => {
-    await import("./src/shared/infra/http/server");
+    await import("./src/shared/infra/http/app");
 });

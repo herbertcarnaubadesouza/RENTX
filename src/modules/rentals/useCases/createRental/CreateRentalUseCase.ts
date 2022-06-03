@@ -1,6 +1,7 @@
 
 import { AppError } from "@errors/AppError";
-import { Rental } from "@modules/rentals/infra/typeorm/entitites/Rental";
+import { Rental } from "@modules/rentals/infra/typeorm/entities/Rental";
+
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 import { inject, injectable } from "tsyringe";
