@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn swagger.ts",
         "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-        "test": "jest",
+        "test": "cross-env NODE_ENV=test jest",
         "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
@@ -14,6 +14,7 @@
         "@types/multer": "^1.4.7",
         "@types/supertest": "^2.0.12",
         "bcryptjs": "2.4.3",
+        "cross-env": "^7.0.3",
         "csv-parse": "^5.0.4",
         "dayjs": "^1.11.2",
         "express": "^4.17.3",
