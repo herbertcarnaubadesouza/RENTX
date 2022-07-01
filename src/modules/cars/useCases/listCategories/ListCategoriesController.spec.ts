@@ -1,4 +1,3 @@
-
 import request from "supertest";
 
 
@@ -41,7 +40,7 @@ describe("Create Category Controller", () => {
 
 
    
-    it("should be able to create a new category", async () => {
+    it("should be able to list all categories", async () => {
 
 
         const responseToken = await request(app).post("/sessions")
@@ -52,7 +51,7 @@ describe("Create Category Controller", () => {
 
         const {token} = responseToken.body;
 
-        const response = await request(app)
+        await request(app)
         .post("/categories")
         .send({            
             name: "Category Sypertest",
@@ -61,33 +60,14 @@ describe("Create Category Controller", () => {
             Authorization: `Bearer ${token}`,
         });
 
-        expect(response.status).toBe(201);
+        const response = await request(app).get("/categories");
+
+        expect(response.status).toBe(200);
+        expect(response.body.length).toBe(1);
     });
 
 
 
-    it("should not be able to create a new category with name exists", async () => {
-
-
-        const responseToken = await request(app).post("/sessions")
-        .send({
-            email: "admin@rentx.com.br",
-            password: "admin",
-        });
-
-        const {token} = responseToken.body;
-
-        const response = await request(app)
-        .post("/categories")
-        .send({            
-            name: "Category Sypertest",
-            description: "Category Sypertest"
-        }).set({
-            Authorization: `Bearer ${token}`,
-        });
-
-        expect(response.status).toBe(400);
-    })
 
 })
 

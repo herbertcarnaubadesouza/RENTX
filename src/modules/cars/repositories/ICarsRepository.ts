@@ -14,6 +14,8 @@ interface ICarsRepository {
 
     findById(car_id: string): Promise<Car>;
 
+    updateAvailable(id: string, available: boolean): Promise<void>;
+
 }
 
 

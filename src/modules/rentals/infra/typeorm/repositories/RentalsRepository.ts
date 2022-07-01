@@ -4,9 +4,6 @@ import { getRepository, Repository } from "typeorm";
 import { Rental } from "../entities/Rental";
 
 
-
-
-
 class RentalsRepository implements IRentalsRepository {
     
     private repository: Repository<Rental>;
@@ -33,6 +30,11 @@ class RentalsRepository implements IRentalsRepository {
 
         return rental;
     }
+
+    async findById(id: string): Promise<Rental> {
+        return await this.repository.findOne(id);
+    }
+
 
 }
 

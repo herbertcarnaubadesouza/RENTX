@@ -169,6 +169,25 @@
         "responses": {}
       }
     },
+    "/rentals/{devolutionid}": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "devolutionid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
     "/sessions": {
       "post": {
         "description": "",
