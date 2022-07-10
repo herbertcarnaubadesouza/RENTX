@@ -20,6 +20,7 @@ class DevolutionRentalController {
 
         return response.status(200).json(rental);
 
+        
     }
 
 }

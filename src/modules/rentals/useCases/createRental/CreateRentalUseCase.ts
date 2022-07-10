@@ -54,6 +54,8 @@ class CreateRentalUseCase {
             expected_return_date
         );
 
+        console.log(dateNow);
+
         if(compare < minimumHour){
             throw new AppError("Invalid return time!");
         }
