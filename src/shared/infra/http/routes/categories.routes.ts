@@ -24,7 +24,41 @@ categoriesRoutes.post(
     ensureAuthenticated,
     ensureAdmin,
     createCategoryController.handle
-    /* #swagger.tags = ['Category'] */
+    /* #swagger.tags = ['Category'] */     
+/*  
+    #swagger.summary = 'Create Category' 
+    #swagger.description = 'Create a Category' 
+    #swagger.requestBody = {   
+        content: {
+            'application/json': {
+                schema: {
+                    type: 'object',
+                    properties: {
+                        name: {
+                            type: 'string'
+                        },
+                        description: {
+                            type: 'string'
+                        }
+                    }
+                    
+                }
+            }
+        } 
+    }
+    
+     #swagger.security = [{
+        "bearerAuth": []
+    }]
+    #swagger.responses[200] = {
+        description: "Success"
+    }
+    #swagger.responses[400] = {
+        description: "Email or password incorrect!"
+    }
+    */     
+
+
 );
 
 

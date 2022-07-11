@@ -20,6 +20,11 @@ userRoutes.post("/", createUserController.handle
 userRoutes.patch(
     "/avatar",
     ensureAuthenticated,
-    uploadAvatar.single("avatar"), updateUserAvatarController.handle);
+    uploadAvatar.single("avatar"), updateUserAvatarController.handle
+    
+    /* #swagger.tags = ['User'] */
+    /* #swagger.security = [{'bearerAuth': []}] */
+
+);
 
 export { userRoutes }

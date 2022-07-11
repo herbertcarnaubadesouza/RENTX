@@ -25,12 +25,17 @@ carsRoutes.post(
     ensureAuthenticated,
     ensureAdmin,
     createCarController.handle
+
+    /* #swagger.tags = ['Car'] */
+
 );
 
 
 carsRoutes.get(
     "/available",
     listAvailableCarsController.handle
+
+    /* #swagger.tags = ['Car'] */
 );
 
 
@@ -39,6 +44,8 @@ carsRoutes.post(
     ensureAuthenticated,
     ensureAdmin,
     createCarSpecificationController.handle
+
+    /* #swagger.tags = ['Car'] */
 );
 
 
@@ -48,6 +55,8 @@ carsRoutes.post(
     ensureAdmin,
     upload.array("images"),
     uploadCarImageController.handle
+
+    /* #swagger.tags = ['Car'] */
 )
 
 

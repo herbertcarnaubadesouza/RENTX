@@ -3,11 +3,12 @@
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "type": "module",
     "scripts": {
-        "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+        "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn swagger.ts",
         "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
         "test": "set NODE_ENV=test&&jest --runInBand --detectOpenHandles",
-        "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"        
+        "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
         "@types/jest": "^27.4.1",
@@ -45,7 +46,7 @@
         "eslint-plugin-prettier": "^4.0.0",
         "nodemon": "^2.0.15",
         "prettier": "^2.6.0",
-        "swagger-autogen": "^2.21.5",
+        "swagger-autogen": "^2.19.0",
         "ts-jest": "^27.1.4",
         "ts-node-dev": "^1.1.8",
         "typescript": "^4.6.2",
