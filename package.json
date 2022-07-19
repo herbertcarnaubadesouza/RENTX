@@ -26,7 +26,7 @@
         "pg": "^8.7.3",
         "reflect-metadata": "^0.1.13",
         "supertest": "^6.2.3",
-        "swagger-ui-express": "^4.3.0",
+        "swagger-ui-express": "^4.4.0",
         "tsconfig-paths": "^3.14.1",
         "tsyringe": "^4.6.0",
         "typeorm": "0.2.31"

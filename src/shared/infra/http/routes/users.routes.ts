@@ -14,7 +14,41 @@ const createUserController = new CreateUserController();
 const updateUserAvatarController = new UpdateUserAvatarController();
 
 userRoutes.post("/", createUserController.handle
-    /* #swagger.tags = ['User'] */
+    /* #swagger.tags = ['User'] 
+    #swagger.summary = 'Create User' 
+    #swagger.description = 'Create a User' 
+    #swagger.requestBody = {   
+        content: {
+            'application/json': {
+                schema: {
+                    type: 'object',
+                    properties: {
+                        name: {
+                            type: 'string'
+                        },
+                        email: {
+                            type: 'string'
+                        },
+                        driver_license: {
+                            type: 'string'
+                        },
+                        password: {
+                            type: 'string'
+                        }
+                    }
+                    
+                }
+            }
+        } 
+    }
+        
+    #swagger.responses[200] = {
+        description: "Success"
+    }
+    #swagger.responses[400] = {
+        description: "Error!"
+    }
+    */    
 );
 
 userRoutes.patch(

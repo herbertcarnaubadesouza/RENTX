@@ -6,16 +6,14 @@ const doc = {
         description: "Api created in a RocketSeat Course",
     },
     host: "localhost:3333",
-    schemes: ["http"],
-    components: {
-        securitySchemes:{
-            bearerAuth: {
-                type: "http",
-                scheme: "bearer",
-                bearerFormat: "JWT"
-            }
+    schemes: ["http"],    
+    securityDefinitions:{
+        bearerAuth: {
+            type: "http",
+            scheme: "bearer",
+            bearerFormat: "JWT"
         }
-    },   
+    }
 };
 
 const outputFile = "./swagger.json";

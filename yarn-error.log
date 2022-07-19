@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\herbe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+  C:\Program Files\nodejs\node.exe C:\Users\herbe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js upgrade swagger-ui-express
 
 PATH: 
   C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Users\herbe\AppData\Roaming\npm;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Git\cmd;;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\Users\herbe\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\herbe\AppData\Local\Programs\Python\Python310\;C:\Users\herbe\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Azure Data Studio\bin;C:\Users\herbe\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\herbe\AppData\Roaming\npm;C:\Users\herbe\.dotnet\tools
@@ -45,7 +45,7 @@ npm manifest:
           "pg": "^8.7.3",
           "reflect-metadata": "^0.1.13",
           "supertest": "^6.2.3",
-          "swagger-ui-express": "^4.3.0",
+          "swagger-ui-express": "^4.4.0",
           "tsconfig-paths": "^3.14.1",
           "tsyringe": "^4.6.0",
           "typeorm": "0.2.31"
@@ -4740,7 +4740,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
     integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
   
-  swagger-autogen@^2.21.5:
+  swagger-autogen@^2.19.0:
     version "2.21.5"
     resolved "https://registry.yarnpkg.com/swagger-autogen/-/swagger-autogen-2.21.5.tgz#143430697495ae0f541ceadea1ff7d48b998cb62"
     integrity sha512-HEpOfxV2R1VoEkwRhTMGNa2PAVt8wnCjMDTiZmAQ1MRDUejKljWh2CxwPfwzdRF9n8fdjUUJS77G/hT1de6e7w==
@@ -4750,17 +4750,17 @@ Lockfile:
       glob "^7.1.7"
       json5 "^2.2.1"
   
-  swagger-ui-dist@>=4.1.3:
-    version "4.8.0"
-    resolved "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.8.0.tgz"
-    integrity sha512-jdcO4XcbwkAtrwvHp90Usjx3d4JZMjaiS02CxBFfuSxr6G8DBXPcK471+N6BcBkwZK7VTgpUBFAyyarsAvKYFQ==
+  swagger-ui-dist@>=4.11.0:
+    version "4.12.0"
+    resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-4.12.0.tgz#986d90f05e81fb9db3ca40372278a5d8ce71db3a"
+    integrity sha512-B0Iy2ueXtbByE6OOyHTi3lFQkpPi/L7kFOKFeKTr44za7dJIELa9kzaca6GkndCgpK1QTjArnoXG+aUy0XQp1w==
   
-  swagger-ui-express@^4.3.0:
-    version "4.3.0"
-    resolved "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.3.0.tgz"
-    integrity sha512-jN46SEEe9EoXa3ZgZoKgnSF6z0w3tnM1yqhO4Y+Q4iZVc8JOQB960EZpIAz6rNROrDApVDwcMHR0mhlnc/5Omw==
+  swagger-ui-express@^4.4.0:
+    version "4.4.0"
+    resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.4.0.tgz#4c50c51a092075588f173b2c3a5c830f07b6b44e"
+    integrity sha512-1CzRkHG386VQMVZK406jcpgnW2a9A5A/NiAjKhsFTQqUBWRF+uGbXTU/mA7WSV3mTzyOQDvjBdWP/c2qd5lqKw==
     dependencies:
-      swagger-ui-dist ">=4.1.3"
+      swagger-ui-dist ">=4.11.0"
   
   symbol-tree@^3.2.4:
     version "3.2.4"

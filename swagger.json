@@ -90,7 +90,8 @@
         "tags": [
           "Specification"
         ],
-        "description": "",
+        "summary": "Create Specification",
+        "description": "Create a Specification",
         "parameters": [
           {
             "name": "authorization",
@@ -100,7 +101,36 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Error!"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       },
       "get": {
         "tags": [
@@ -116,9 +146,40 @@
         "tags": [
           "User"
         ],
-        "description": "",
+        "summary": "Create User",
+        "description": "Create a User",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Error!"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "driver_license": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/users/avatar": {
@@ -149,7 +210,8 @@
         "tags": [
           "Car"
         ],
-        "description": "",
+        "summary": "Create Car",
+        "description": "Create a Car",
         "parameters": [
           {
             "name": "authorization",
@@ -159,7 +221,51 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Error!"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "daily_rate": {
+                    "type": "number"
+                  },
+                  "licence_plate": {
+                    "type": "string"
+                  },
+                  "fine_amount": {
+                    "type": "number"
+                  },
+                  "brand": {
+                    "type": "string"
+                  },
+                  "category_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/cars/available": {
@@ -177,7 +283,8 @@
         "tags": [
           "Car"
         ],
-        "description": "",
+        "summary": "Create Car",
+        "description": "Create a Car",
         "parameters": [
           {
             "name": "id",
@@ -185,7 +292,8 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "Specification Id."
           },
           {
             "name": "authorization",
@@ -195,7 +303,33 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Error!"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "specifications_id": {
+                    "type": "array"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/cars/images/{id}": {
@@ -203,6 +337,7 @@
         "tags": [
           "Car"
         ],
+        "summary": "Create Car",
         "description": "",
         "parameters": [
           {
@@ -219,9 +354,27 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "singleFile",
+            "in": "formData",
+            "required": true,
+            "description": "Some description...",
+            "schema": {
+              "type": "file"
+            }
           }
         ],
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
       }
     },
     "/rentals/": {

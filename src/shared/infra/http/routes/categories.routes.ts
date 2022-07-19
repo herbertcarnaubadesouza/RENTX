@@ -24,8 +24,7 @@ categoriesRoutes.post(
     ensureAuthenticated,
     ensureAdmin,
     createCategoryController.handle
-    /* #swagger.tags = ['Category'] */     
-/*  
+    /* #swagger.tags = ['Category'] 
     #swagger.summary = 'Create Category' 
     #swagger.description = 'Create a Category' 
     #swagger.requestBody = {   
