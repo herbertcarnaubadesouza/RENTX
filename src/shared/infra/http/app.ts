@@ -1,9 +1,10 @@
 import 'reflect-metadata';
+import cors from 'cors'
 import express, { Request, Response, NextFunction } from 'express';
 import "express-async-errors";
-import swaggerUi from "swagger-ui-express";
+import swaggerUI from "swagger-ui-express";
 import { router } from './routes';
-import swaggerFile from '../../../../swagger.json';
+import swaggerFile from '../../../swagger.json';
 import createConnection from '@shared/infra/typeorm';
 import "../../container";
 import '../typeorm';
@@ -17,8 +18,11 @@ const app = express();
 
 app.use(express.json());
 
-//swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+//Swagger API
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerFile));
+
+app.use(cors());
 
 app.use(router);
 

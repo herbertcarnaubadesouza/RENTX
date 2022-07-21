@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn swagger.ts",
+        "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
         "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
         "test": "set NODE_ENV=test&&jest --runInBand --detectOpenHandles",
         "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
@@ -15,6 +15,7 @@
         "@types/multer": "^1.4.7",
         "@types/supertest": "^2.0.12",
         "bcryptjs": "2.4.3",
+        "cors": "^2.8.5",
         "cross-env": "^7.0.3",
         "csv-parse": "^5.0.4",
         "dayjs": "^1.11.2",
@@ -26,7 +27,7 @@
         "pg": "^8.7.3",
         "reflect-metadata": "^0.1.13",
         "supertest": "^6.2.3",
-        "swagger-ui-express": "^4.4.0",
+        "swagger-ui-express": "^4.5.0",
         "tsconfig-paths": "^3.14.1",
         "tsyringe": "^4.6.0",
         "typeorm": "0.2.31"
@@ -46,7 +47,6 @@
         "eslint-plugin-prettier": "^4.0.0",
         "nodemon": "^2.0.15",
         "prettier": "^2.6.0",
-        "swagger-autogen": "^2.19.0",
         "ts-jest": "^27.1.4",
         "ts-node-dev": "^1.1.8",
         "typescript": "^4.6.2",

@@ -12,15 +12,12 @@ const devolutionRentalController = new DevolutionRentalController();
 const listRentalsByUserController = new ListRentalsByUserController();
 
 rentalRoutes.post("/", ensureAuthenticated, createRentalController.handle
-    /* #swagger.tags = ['Rental'] */
 );
 
 rentalRoutes.post("/devolution/:id", ensureAuthenticated, devolutionRentalController.handle
-    /* #swagger.tags = ['Rental'] */
 );
 
 rentalRoutes.get("/user", ensureAuthenticated, listRentalsByUserController.handle
-    /* #swagger.tags = ['Rental'] */
 );
 
 
