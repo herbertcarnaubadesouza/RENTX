@@ -17,42 +17,9 @@ specificationsRoutes.post(
     ensureAuthenticated,
     ensureAdmin,
     createSpecificationController.handle
-    /* #swagger.tags = ['Specification'] 
-    #swagger.summary = 'Create Specification' 
-    #swagger.description = 'Create a Specification' 
-    #swagger.requestBody = {   
-        content: {
-            'application/json': {
-                schema: {
-                    type: 'object',
-                    properties: {
-                        name: {
-                            type: 'string'
-                        },
-                        description: {
-                            type: 'string'
-                        }
-                    }
-                    
-                }
-            }
-        } 
-    }
-    
-     #swagger.security = [{
-        "bearerAuth": []
-    }]
-    #swagger.responses[200] = {
-        description: "Success"
-    }
-    #swagger.responses[400] = {
-        description: "Error!"
-    }
-    */    
 );
 
 specificationsRoutes.get("/", listSpecificationsController.handle
-    /* #swagger.tags = ['Specification'] */
 );
 
 

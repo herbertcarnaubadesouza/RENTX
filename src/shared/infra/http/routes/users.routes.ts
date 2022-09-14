@@ -7,7 +7,7 @@ import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
 const userRoutes = Router();
 
-const uploadAvatar = multer(uploadConfig.upload("./tmp/avatar"));
+const uploadAvatar = multer(uploadConfig);
 
 
 const createUserController = new CreateUserController();
@@ -48,14 +48,14 @@ userRoutes.post("/", createUserController.handle
     #swagger.responses[400] = {
         description: "Error!"
     }
-    */    
+    */
 );
 
 userRoutes.patch(
     "/avatar",
     ensureAuthenticated,
     uploadAvatar.single("avatar"), updateUserAvatarController.handle
-    
+
     /* #swagger.tags = ['User'] */
     /* #swagger.security = [{'bearerAuth': []}] */
 

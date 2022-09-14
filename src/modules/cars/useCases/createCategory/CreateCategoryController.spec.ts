@@ -40,26 +40,26 @@ describe("Create Category Controller", () => {
     })
 
 
-   
+
     it("should be able to create a new category", async () => {
 
 
         const responseToken = await request(app).post("/sessions")
-        .send({
-            email: "admin@rentx.com.br",
-            password: "admin",
-        });
+            .send({
+                email: "admin@rentx.com.br",
+                password: "admin",
+            });
 
-        const {token} = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         const response = await request(app)
-        .post("/categories")
-        .send({            
-            name: "Category Sypertest",
-            description: "Category Sypertest"
-        }).set({
-            Authorization: `Bearer ${token}`,
-        });
+            .post("/categories")
+            .send({
+                name: "Category Sypertest",
+                description: "Category Sypertest"
+            }).set({
+                Authorization: `Bearer ${refresh_token}`,
+            });
 
         expect(response.status).toBe(201);
     });
@@ -70,21 +70,21 @@ describe("Create Category Controller", () => {
 
 
         const responseToken = await request(app).post("/sessions")
-        .send({
-            email: "admin@rentx.com.br",
-            password: "admin",
-        });
+            .send({
+                email: "admin@rentx.com.br",
+                password: "admin",
+            });
 
-        const {token} = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         const response = await request(app)
-        .post("/categories")
-        .send({            
-            name: "Category Sypertest",
-            description: "Category Sypertest"
-        }).set({
-            Authorization: `Bearer ${token}`,
-        });
+            .post("/categories")
+            .send({
+                name: "Category Sypertest",
+                description: "Category Sypertest"
+            }).set({
+                Authorization: `Bearer ${refresh_token}`,
+            });
 
         expect(response.status).toBe(400);
     })

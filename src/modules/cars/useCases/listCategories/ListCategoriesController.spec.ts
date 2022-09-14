@@ -39,26 +39,26 @@ describe("Create Category Controller", () => {
     })
 
 
-   
+
     it("should be able to list all categories", async () => {
 
 
         const responseToken = await request(app).post("/sessions")
-        .send({
-            email: "admin@rentx.com.br",
-            password: "admin",
-        });
+            .send({
+                email: "admin@rentx.com.br",
+                password: "admin",
+            });
 
-        const {token} = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         await request(app)
-        .post("/categories")
-        .send({            
-            name: "Category Sypertest",
-            description: "Category Sypertest"
-        }).set({
-            Authorization: `Bearer ${token}`,
-        });
+            .post("/categories")
+            .send({
+                name: "Category Sypertest",
+                description: "Category Sypertest"
+            }).set({
+                Authorization: `Bearer ${refresh_token}`,
+            });
 
         const response = await request(app).get("/categories");
 

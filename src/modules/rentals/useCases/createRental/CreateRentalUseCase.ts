@@ -31,13 +31,13 @@ class CreateRentalUseCase {
         car_id,
         expected_return_date
     }: IRequest): Promise<Rental>{
-
+       
         const minimumHour = 24;
 
         const carUnavailable = await this.rentalsRepository.findOpenRentalByCar(car_id);
 
 
-        if(carUnavailable){
+        if(carUnavailable){                
             throw new AppError("Car is unavailable");
         }
 
@@ -52,15 +52,11 @@ class CreateRentalUseCase {
         const compare = this.dateProvider.compareInHours(            
             dateNow,
             expected_return_date
-        );
-
-        console.log(dateNow);
+        );           
 
         if(compare < minimumHour){
             throw new AppError("Invalid return time!");
         }
-
-        console.log("Compare Date", compare);
 
         const rental =  await this.rentalsRepository.create({
             user_id,

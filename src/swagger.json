@@ -5,7 +5,7 @@
     "description": "This is an API Rent",
     "version": "1.0.0",
     "contact": {
-      "email": "thihxm@gmail.com"
+      "email":"dani@rocketseat.com.br"
     }
   },
   "paths": {
@@ -13,39 +13,39 @@
       "post": {
         "tags": ["Category"],
         "summary": "Create a category",
-        "description": "Create a new category",
-        "security": [
-          { "bearerAuth": [] }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  }
-                },
-                "example": {
-                  "name": "Category name sample",
-                  "description": "Category description sample"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Category already exists"
-          }
-        }
+         "description": "Create a new category",
+         "security": [
+          { "bearerAuth": []}
+         ],
+         "requestBody": {
+           "content": {
+             "application/json": {
+               "schema": {
+                 "type": "object",
+                 "properties": {
+                   "name": {
+                     "type": "string"
+                   },
+                   "description": {
+                     "type": "string"
+                   }
+                 },
+                 "example": {
+                   "name": "category name sample",
+                   "description": "Category description sample"
+                 }
+               }
+             }
+           }
+         },
+         "responses": {
+           "201": {
+             "description": "Created"
+           },
+           "500": {
+             "description": "Category already exists"
+           }
+         }
       },
       "get": {
         "tags": ["Category"],
@@ -82,8 +82,8 @@
         "summary": "Upload a new category",
         "description": "Upload a new category",
         "security": [
-          { "bearerAuth": [] }
-        ],
+          { "bearerAuth": []}
+         ],
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -112,8 +112,8 @@
         "summary": "Create a specification",
         "description": "Create a new specification",
         "security": [
-          { "bearerAuth": [] }
-        ],
+          { "bearerAuth": []}
+         ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -128,14 +128,14 @@
             "description": "Created"
           },
           "500": {
-            "description": "Specification already exists" 
+            "description": "Specification already exists!"
           }
         }
       }
     },
     "/sessions": {
       "post": {
-        "tags": ["Sessions"],
+        "tags": ["Session"],
         "summary": "Authentication user",
         "description": "Authentication user",
         "requestBody": {
@@ -150,17 +150,21 @@
                   "password": {
                     "type": "string"
                   }
+                },
+                "example": {
+                  "email": "admin@rentx.com.br",
+                  "password": "admin"
                 }
               }
             }
           }
         },
         "responses": {
-          "200": {
+          "200": { 
             "description": "Success"
           },
           "400": {
-            "description": "Email or password incorrect"
+            "description": "Email or password incorrect!"
           }
         }
       }
@@ -171,13 +175,13 @@
         "summary": "Create a new car",
         "description": "Create a new car",
         "security": [
-          { "bearerAuth": [] }
-        ],
+          { "bearerAuth": []}
+         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/definitions/Car"
+                "$ref":  "#/definitions/Car"
               }
             }
           }
@@ -195,10 +199,10 @@
     "/cars/images/{id}": {
       "post": {
         "tags": ["Cars"],
-        "summary": "Upload car images",
-        "description": "Upload car images",
+        "summary": "Upload images",
+        "description": "Upload images",
         "security": [
-          { "bearerAuth": [] }
+          { "bearerAuth": []}
         ],
         "parameters": [
           {
@@ -216,7 +220,7 @@
             "multipart/form-data": {
               "schema": {
                 "type": "object",
-                "properties":{
+                "properties": {
                   "images": {
                     "type": "array",
                     "items": {
@@ -230,7 +234,7 @@
           }
         },
         "responses": {
-          "201": {
+          "201": { 
             "description": "Created"
           }
         }
@@ -285,4 +289,5 @@
       }
     }
   }
+  
 }
