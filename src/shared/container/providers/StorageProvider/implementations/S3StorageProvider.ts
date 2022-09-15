@@ -5,7 +5,7 @@ import { S3 } from "aws-sdk"
 import { resolve } from "path"
 import { IStorageProvider } from "../IStorageProvider";
 
-class S3SorageProvider implements IStorageProvider {
+class S3StorageProvider implements IStorageProvider {
     private client: S3;
 
     constructor() {
@@ -43,4 +43,4 @@ class S3SorageProvider implements IStorageProvider {
 }
 
 
-export { S3SorageProvider }
+export { S3StorageProvider }

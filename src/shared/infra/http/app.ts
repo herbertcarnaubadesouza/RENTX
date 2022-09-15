@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import "dotenv/config";
 import cors from 'cors'
 import express, { Request, Response, NextFunction } from 'express';
 import "express-async-errors";
@@ -39,4 +40,4 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     })
 });
 
-export {app}
+export { app }
