@@ -10,6 +10,7 @@ import createConnection from '@shared/infra/typeorm';
 import "../../container";
 import '../typeorm';
 import { AppError } from '@errors/AppError';
+import upload from '@config/upload';
 
 
 createConnection() // Esse "then" você pode apagar, se quiser
@@ -22,6 +23,9 @@ app.use(express.json());
 //Swagger API
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerFile));
+
+app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`));
+app.use("/cars", express.static(`${upload.tmpFolder}/cars`));
 
 app.use(cors());
 
