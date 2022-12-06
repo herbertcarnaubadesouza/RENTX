@@ -4,6 +4,7 @@ import { S3StorageProvider } from "./implementations/S3StorageProvider";
 import { IStorageProvider } from "./IStorageProvider";
 
 
+console.log(process.env.disk)
 
 const diskStorage = {
     local: LocalStorageProvider,
