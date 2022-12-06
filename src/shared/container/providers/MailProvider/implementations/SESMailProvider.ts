@@ -1,12 +1,12 @@
-import { injectable } from "tsyringe";
 import { SES } from "aws-sdk";
-import nodemailer, { Transporter } from "nodemailer";
-import { IMailProvider } from "../IMailProvider";
-import handlebars from "handlebars";
 import fs from "fs";
+import handlebars from "handlebars";
+import nodemailer, { Transporter } from "nodemailer";
+import { injectable } from "tsyringe";
+import { IMailProvider } from "../IMailProvider";
 
 @injectable()
-class SESMailProvider implements IMailProvider {
+class _SesMailProvider implements IMailProvider {
     private client: Transporter;
 
     constructor() {
@@ -35,4 +35,4 @@ class SESMailProvider implements IMailProvider {
     }
 }
 
-export { SESMailProvider }
+export { _SesMailProvider };
