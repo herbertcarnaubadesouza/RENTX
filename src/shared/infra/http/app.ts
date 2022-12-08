@@ -1,22 +1,25 @@
-import 'reflect-metadata';
-import "dotenv/config";
-import cors from 'cors'
-import express, { Request, Response, NextFunction } from 'express';
-import "express-async-errors";
-import swaggerUI from "swagger-ui-express";
-import { router } from './routes';
-import swaggerFile from '../../../swagger.json';
+import upload from '@config/upload';
+import { AppError } from '@errors/AppError';
+import rateLimiter from "@shared/infra/http/middlewares/rateLimiter";
 import createConnection from '@shared/infra/typeorm';
+import cors from 'cors';
+import "dotenv/config";
+import express, { NextFunction, Request, Response } from 'express';
+import "express-async-errors";
+import 'reflect-metadata';
+import swaggerUI from "swagger-ui-express";
+import swaggerFile from '../../../swagger.json';
 import "../../container";
 import '../typeorm';
-import { AppError } from '@errors/AppError';
-import upload from '@config/upload';
+import { router } from './routes';
 
 
 createConnection() // Esse "then" você pode apagar, se quiser
     .then(() => console.log('connected to database'));
 
 const app = express();
+
+app.use(rateLimiter);
 
 app.use(express.json());
 
@@ -44,4 +47,4 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     })
 });
 
-export { app }
+export { app };
